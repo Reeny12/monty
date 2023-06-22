@@ -12,11 +12,15 @@ void f_swap(stack_t **head, unsigned int counter)
 
 	h = *head;
 
+	/*a while loop that checks if we're still on the elements of the stack*/
+
 	while (h)
 	{
 		h = h->next;
 		len++;
 	}
+
+	/*an if statement that checks the length of the stack*/
 
 	if (len < 2)
 	{
