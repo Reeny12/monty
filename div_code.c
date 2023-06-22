@@ -12,12 +12,13 @@ void f_div(stack_t **head, unsigned int counter)
         int len = 0, aux;
 
         h = *head;
+        /* while loop */
         while (h)
         {
                 h = h->next;
                 len++;
         }
-        if (len < 2)
+        if (len < 2)/* checks if stack is short after division */
         {
                 fprintf(stderr, "L%d: can't div, stack too short\n", counter);
                 fclose(bus.file);
@@ -26,7 +27,7 @@ void f_div(stack_t **head, unsigned int counter)
                 exit(EXIT_FAILURE);
         }
         h = *head;
-        if (h->n == 0)
+        if (h->n == 0)/* division by zero */
         {
                 fprintf(stderr, "L%d: division by zero\n", counter);
                 fclose(bus.file);

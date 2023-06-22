@@ -12,12 +12,13 @@ void f_mod(stack_t **head, unsigned int counter)
 	int len = 0, aux;
 
 	h = *head;
+	/* while loop */
 	while (h)
 	{
 		h = h->next;
 		len++;
 	}
-	if (len < 2)
+	if (len < 2)/* can not mod */
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
 		fclose(bus.file);
