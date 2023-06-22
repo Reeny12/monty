@@ -9,10 +9,15 @@ void f_push(stack_t **head, unsigned int counter)
 {
 	int n, j = 0, flag = 0;
 
+	/*if statement*/
+
 	if (bus.arg)
 	{
+		/*if statement*/
 		if (bus.arg[0] == '-')
 			j++;
+
+		/*traverses through the arguments*/
 		for (; bus.arg[j] != '\0'; j++)
 		{
 			if (bus.arg[j] > 57 || bus.arg[j] < 48)
@@ -30,6 +35,7 @@ void f_push(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
 	n = atoi(bus.arg);
+
 	if (bus.lifi == 0)
 		addnode(head, n);
 	else
