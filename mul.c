@@ -11,11 +11,15 @@ void f_mul(stack_t **head, unsigned int counter)
 	int len = 0, aux;
 
 	h = *head;
+
+	/*while loop*/
+
 	while (h)
 	{
 		h = h->next;
 		len++;
-	}
+	}/*if statement*/
+
 	if (len < 2)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", counter);
@@ -24,6 +28,9 @@ void f_mul(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
+
+	/*point to the next element*/
+
 	h = *head;
 	aux = h->next->n * h->n;
 	h->next->n = aux;
