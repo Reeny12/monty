@@ -18,7 +18,9 @@ void f_mul(stack_t **head, unsigned int counter)
 	{
 		h = h->next;
 		len++;
-	}/*if statement*/
+	}
+	
+	/*if statement*/
 
 	if (len < 2)
 	{
