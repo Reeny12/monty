@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
+	/* while loop */
 	while (read_line > 0)
 	{
 		content = NULL;
